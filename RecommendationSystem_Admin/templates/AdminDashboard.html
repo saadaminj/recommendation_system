@@ -1,0 +1,342 @@
+ {% extends './AdminBase.html' %} {% block title %}Dashboard{% endblock title %} {% block content %} {% load static %}
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Details-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Projects</h5>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+                <!--end::Separator-->
+            </div>
+            <!--end::Details-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <!--begin::Row-->
+            <div class="row">
+                <!--begin::Col-->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <!--begin::Card-->
+                    <div class="card card-custom gutter-b card-stretch">
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex align-items-center mb-7">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="symbol symbol-circle symbol-lg-75">
+                                        <img src="{% static 'assets/media/project-logos/1.png' %}" alt="image" />
+                                    </div>
+                                </div>
+                                <!--end::Pic-->
+                                <!--begin::Title-->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Air B</a>
+                                    <span class="text-muted font-weight-bold">Head of Development</span>
+                                </div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7">I distinguish three main text objectives. First, your objective
+                                <a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
+                            <!--end::Desc-->
+                            <!--begin::Info-->
+                            <div class="mb-7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$249,500</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-cente my-1">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$76,810</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                    <span class="text-muted font-weight-bold">21.05.2016</span>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+                            <a href="#" class="btn btn-block btn-sm btn-light-success font-weight-bolder text-uppercase py-4">write message</a>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end:: Card-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <!--begin::Card-->
+                    <div class="card card-custom gutter-b card-stretch">
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex align-items-center mb-7">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="symbol symbol-circle symbol-lg-75">
+                                        <img src="{% static 'assets/media/project-logos/2.png' %}" alt="image" />
+                                    </div>
+                                </div>
+                                <!--end::Pic-->
+                                <!--begin::Title-->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Ad Brand</a>
+                                    <span class="text-muted font-weight-bold">PR Manager</span>
+                                </div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7">I distinguish three main text objectives. First, your objective
+                                <a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
+                            <!--end::Desc-->
+                            <!--begin::Info-->
+                            <div class="mb-7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$249,500</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-cente my-1">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$76,810</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                    <span class="text-muted font-weight-bold">21.05.2016</span>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+                            <a href="#" class="btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4">write message</a>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end:: Card-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <!--begin::Card-->
+                    <div class="card card-custom gutter-b card-stretch">
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex align-items-center mb-7">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="symbol symbol-circle symbol-lg-75">
+                                        <img src="{% static 'assets/media/project-logos/3.png' %}" alt="image" />
+                                    </div>
+                                </div>
+                                <!--end::Pic-->
+                                <!--begin::Title-->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Nexa</a>
+                                    <span class="text-muted font-weight-bold">Python Developer</span>
+                                </div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7">I distinguish three main text objectives. First, your objective
+                                <a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
+                            <!--end::Desc-->
+                            <!--begin::Info-->
+                            <div class="mb-7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$249,500</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-cente my-1">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$76,810</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                    <span class="text-muted font-weight-bold">21.05.2016</span>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+                            <a href="#" class="btn btn-block btn-sm btn-light-info font-weight-bolder text-uppercase py-4">write message</a>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end:: Card-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Row-->
+            <!--begin::Row-->
+            <div class="row">
+                <!--begin::Col-->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <!--begin::Card-->
+                    <div class="card card-custom gutter-b card-stretch">
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex align-items-center mb-7">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="symbol symbol-circle symbol-lg-75">
+                                        <img src="{% static 'assets/media/project-logos/5.png' %}" alt="image" />
+                                    </div>
+                                </div>
+                                <!--end::Pic-->
+                                <!--begin::Title-->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Citrix</a>
+                                    <span class="text-muted font-weight-bold">Project Manager</span>
+                                </div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7">I distinguish three main text objectives. First, your objective
+                                <a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
+                            <!--end::Desc-->
+                            <!--begin::Info-->
+                            <div class="mb-7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$249,500</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-cente my-1">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$76,810</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                    <span class="text-muted font-weight-bold">21.05.2016</span>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+                            <a href="#" class="btn btn-block btn-sm btn-light-success font-weight-bolder text-uppercase py-4">write message</a>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end:: Card-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <!--begin::Card-->
+                    <div class="card card-custom gutter-b card-stretch">
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex align-items-center mb-7">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="symbol symbol-circle symbol-lg-75">
+                                        <img src="{% static 'assets/media/project-logos/6.png' %}" alt="image" />
+                                    </div>
+                                </div>
+                                <!--end::Pic-->
+                                <!--begin::Title-->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Gap</a>
+                                    <span class="text-muted font-weight-bold">Frontend Developer</span>
+                                </div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7">I distinguish three main text objectives. First, your objective
+                                <a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
+                            <!--end::Desc-->
+                            <!--begin::Info-->
+                            <div class="mb-7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$249,500</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-cente my-1">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$76,810</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                    <span class="text-muted font-weight-bold">21.05.2016</span>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+                            <a href="#" class="btn btn-block btn-sm btn-light-info font-weight-bolder text-uppercase py-4">write message</a>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end:: Card-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                    <!--begin::Card-->
+                    <div class="card card-custom gutter-b card-stretch">
+                        <!--begin::Body-->
+                        <div class="card-body pt-4">
+                            <!--begin::User-->
+                            <div class="d-flex align-items-center mb-7">
+                                <!--begin::Pic-->
+                                <div class="flex-shrink-0 mr-4">
+                                    <div class="symbol symbol-circle symbol-lg-75">
+                                        <img src="{% static 'assets/media/project-logos/7.png' %}" alt="image" />
+                                    </div>
+                                </div>
+                                <!--end::Pic-->
+                                <!--begin::Title-->
+                                <div class="d-flex flex-column">
+                                    <a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Nokia</a>
+                                    <span class="text-muted font-weight-bold">App Developer</span>
+                                </div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::User-->
+                            <!--begin::Desc-->
+                            <p class="mb-7">I distinguish three main text objectives. First, your objective
+                                <a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
+                            <!--end::Desc-->
+                            <!--begin::Info-->
+                            <div class="mb-7">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$249,500</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-cente my-1">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
+                                    <a href="#" class="text-muted text-hover-primary">$76,810</a>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
+                                    <span class="text-muted font-weight-bold">21.05.2016</span>
+                                </div>
+                            </div>
+                            <!--end::Info-->
+                            <a href="#" class="btn btn-block btn-sm btn-light-warning font-weight-bolder text-uppercase py-4">write message</a>
+                        </div>
+                        <!--end::Body-->
+                    </div>
+                    <!--end:: Card-->
+                </div>
+                <!--end::Col-->
+            </div>
+            <!--end::Row-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+<!--end::Content-->
+{% endblock content %}

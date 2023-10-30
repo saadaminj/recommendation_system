@@ -1,0 +1,97 @@
+{% extends '../AdminBase.html' %} {% block title %}Add New Product{% endblock title %} {% block content %} {% load static %}
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Details-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Add New Product</h5>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+                <!--end::Separator-->
+            </div>
+            <!--end::Details-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <!--begin::Button-->
+                <a href="#" class=""></a>
+                <!--end::Button-->
+                <!--begin::Button-->
+                <a href="{% url 'productDetails' %}" class="btn btn-warning font-weight-bold ml-2">
+                    <span><i class="fas fa-arrow-left"></i></span>Back</a>
+                <!--end::Button-->
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="" enctype="multipart/form-data" method='POST'>
+                        {% csrf_token %}
+                        <!--begin::Card-->
+                        <div class="card card-custom">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <label>Product Name<span class="text-danger">*</span> :</label>
+                                        <input type="text" name="product_name" id="product_name" placeholder="Enter Product Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Product Code<span class="text-danger">*</span> :</label>
+                                        <input type="text" name="product_code" id="product_code" placeholder="Enter Product Code" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Product Price<span class="text-danger">*</span> :</label>
+                                        <input type="text" name="product_price" id="product_price" placeholder="Enter Product Price" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Product Category<span class="text-danger">*</span> :</label>
+                                        <!-- <input type="text" name="product_category" id="product_category" placeholder="Enter Product Category" class="form-control" required> -->
+                                        <select name="product_category" required id="product_category" class="form-control">
+                                            <option value="">SELECT PRODUCT CATEGORY</option>
+                                            {% for categoryItem in categoryObj  %}
+                                            <option value="{{categoryItem.pk}}">{{categoryItem.category_name}}</option>                                
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Product Sub Category<span class="text-danger">*</span> :</label>
+                                        <!-- <input type="text" name="product_subcategory" id="product_subcategory" placeholder="Enter Product Sub Category" class="form-control" required> -->
+                                        <select name="product_subcategory" required id="product_subcategory" class="form-control">
+                                            <option value="">SELECT PRODUCT SUB CATEGORY</option>
+                                            {% for subcategoryItem in subcategoryObj  %}
+                                            <option value="{{subcategoryItem.pk}}">{{subcategoryItem.subcategory_name}}</option>                                
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Product Poster<span class="text-danger">*</span> :</label>
+                                        <input type="file" id="poster" name="poster" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary" type="submit">SAVE</button>
+                                <a href="{% url 'productDetails' %}" class="btn btn-danger">CANCEL</a>
+                            </div>
+                        </div>
+                        <!--end::Card-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+<!--end::Content-->
+{% endblock content %}

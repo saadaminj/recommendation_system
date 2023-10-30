@@ -1,0 +1,99 @@
+{% load static %}
+<!--begin::Container-->
+<div class="container">
+    <!--begin::Header Menu Wrapper-->
+    <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+        <!--begin::Header Menu-->
+        <div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
+            <!--begin::Header Nav-->
+            <ul class="menu-nav">
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="{% url 'HomePage' %}" class="menu-link">
+                        <span class="menu-text">Home</span>
+                        <span class="menu-desc"></span>
+                    </a>
+                </li>
+                {% for categoryItem in categoryObj %}
+                <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="menu-text"><i class="fas fa-solid fa-shirt"></i>{{categoryItem.category_name}}</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+                        <ul class="menu-subnav">
+                            {% for subcategoryItem in subcategoryObj %} {% if subcategoryItem.category_id == categoryItem.pk %}
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="" class="menu-link">
+                                    <span class="menu-text">{{subcategoryItem.subcategory_name}}</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                            {% endif %}{% endfor %}
+                        </ul>
+                    </div>
+                </li>
+                {% endfor %}
+                <!-- <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="menu-text">Footwear</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+                        <ul class="menu-subnav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="index.html" class="menu-link">
+                                    <span class="menu-text">Men</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="https://preview.keenthemes.com/metronic/demo9/builder.html" class="menu-link">
+                                    <span class="menu-text">Women</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="https://preview.keenthemes.com/metronic/demo9/builder.html" class="menu-link">
+                                    <span class="menu-text">Children</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="menu-item menu-item-submenu menu-item-rel" data-menu-toggle="hover" aria-haspopup="true">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <span class="menu-text">Food</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu menu-submenu-classic menu-submenu-left">
+                        <ul class="menu-subnav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="index.html" class="menu-link">
+                                    <span class="menu-text">Authentic</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="https://preview.keenthemes.com/metronic/demo9/builder.html" class="menu-link">
+                                    <span class="menu-text">Thai</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="https://preview.keenthemes.com/metronic/demo9/builder.html" class="menu-link">
+                                    <span class="menu-text">Asian & Chinese</span>
+                                    <span class="menu-desc"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li> -->
+            </ul>
+            <!--end::Header Nav-->
+        </div>
+        <!--end::Header Menu-->
+    </div>
+    <!--end::Header Menu Wrapper-->
+</div>
+<!--end::Container-->

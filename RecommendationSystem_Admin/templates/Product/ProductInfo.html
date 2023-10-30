@@ -1,0 +1,80 @@
+{% extends '../AdminBase.html' %} {% block title %}Product Details{% endblock title %} {% block content %} {% load static %} {% for item in productObj %}
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Details-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Product Details : </h5>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+                <!--end::Separator-->
+            </div>
+            <!--end::Details-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <!--begin::Button-->
+                <a href="{% url 'productDetails' %}" class="btn btn-warning font-weight-bold ml-2"><span><i class="fas fa-arrow-left"></i></span>Back</a>
+                <!--end::Button-->
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!--begin::Card-->
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td><b>Product Name</b></td>
+                                                <td> : {{item.product_name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Product Code</b></td>
+                                                <td> : {{item.product_code}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Product Price</b></td>
+                                                <td> : {{item.product_price}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Product Category</b></td>
+                                                <td> : {{item.product_category.category_name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Product Sub Category</b></td>
+                                                <td> : {{item.product_subcategory.subcategory_name}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Poster</b></td>
+                                                <td> :
+                                                    <img src='{{item.poster.url}}' alt=" " style="height: 100px;width: 100px;"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Card-->
+                </div>
+            </div>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+<!--end::Content-->
+{% endfor %}{% endblock content %}

@@ -1,0 +1,110 @@
+{% extends '../AdminBase.html' %} {% block title %}Sub Category Details{% endblock title %} {% block content %} {% load static %} {% for item in subcategoryObj %}
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Details-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Sub Category Details : </h5>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+                <!--end::Separator-->
+            </div>
+            <!--end::Details-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <!--begin::Button-->
+                <a href="" class="btn btn-warning font-weight-bold ml-2"><span><i class="fas fa-arrow-left"></i></span>Back</a>
+                <!--end::Button-->
+                <!--begin::Button-->
+                <!-- <a href="" class="btn btn-primary font-weight-bold ml-2"><span><i class="fas fa-pencil-alt"></i></span>Edit Details</a> -->
+                <!--end::Button-->
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!--begin::Card-->
+                    <div class="card card-custom">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>Subcategory Name</td>
+                                                <td> : <b>{{item.subcategory_name}}</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Category</td>
+                                                <td> : <b>{{item.category.category_name}}</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Card-->
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <!--begin::Card-->
+                    <div class="card card-custom">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <h3>Products Of Sub Category :</h3>
+                            </div>
+                            <!-- <div class="card-toolbar">
+                                <a href="" class="btn btn-primary"><span><i class="fas fa-plus-circle"></i></span> Add Product For Same Sub Category</a>
+                            </div> -->
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div style="overflow:auto!important;">
+                                        <!--begin: Datatable-->
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product Name</th>
+                                                    <th>Product Code</th>
+                                                    <th>Product Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for productItem in productObj %}
+                                                <tr>
+                                                    <td>{{productItem.product_name}}</td>
+                                                    <td>{{productItem.product_code}}</td>
+                                                    <td>{{productItem.product_price}}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                        <!--end: Datatable-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end::Card-->
+                </div>
+            </div>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+<!--end::Content-->
+{% endfor %}{% endblock content %}

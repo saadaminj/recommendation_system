@@ -1,0 +1,75 @@
+{% extends '../AdminBase.html' %} {% block title %}Add New Admin User{% endblock title %} {% block content %} {% load static %}
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Details-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Add New Admin User</h5>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+                <!--end::Separator-->
+            </div>
+            <!--end::Details-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <!--begin::Button-->
+                <a href="#" class=""></a>
+                <!--end::Button-->
+                <!--begin::Button-->
+                <a href="{% url 'adminUserList' %}" class="btn btn-warning font-weight-bold ml-2"> <span><i class="fas fa-arrow-left"></i></span>Back</a>
+                <!--end::Button-->
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!--begin::Card-->
+                    <form action="" enctype="multipart/form-data" method='POST'>
+                        <div class="card card-custom">
+                            <div class="card-body">
+                                {% csrf_token %}
+                                <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <label>First Name<span class="text-danger">*</span> :</label>
+                                        <input type="text" name="first_name" id="first_name" placeholder="Enter First Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Last Name<span class="text-danger">*</span> :</label>
+                                        <input type="text" name="last_name" id="last_name" placeholder="Enter Last Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Email <span class="text-danger">*</span> :</label>
+                                        <input type="email" name="email" id="email" placeholder="Enter Email" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Phone No.<span class="text-danger">*</span> :</label>
+                                        <input type="text" id="phone_no" name="phone_no" class="form-control" placeholder="Enter Phone No." required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary" type="submit">SAVE</button>
+                                <a href="{% url 'adminUserList' %}" class="btn btn-danger">CANCEL</a>
+                            </div>
+                        </div>
+                    </form>
+                    <!--end::Card-->
+                </div>
+            </div>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+<!--end::Content-->
+{% endblock content %}

@@ -1,0 +1,69 @@
+{% extends '../AdminBase.html' %} {% block title %}Edit Sub Category{% endblock title %} {% block content %} {% load static %} {% for item in subcategoryObj %}
+<!--begin::Content-->
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+    <!--begin::Subheader-->
+    <div class="subheader py-2 py-lg-4 subheader-transparent" id="kt_subheader">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
+            <!--begin::Details-->
+            <div class="d-flex align-items-center flex-wrap mr-2">
+                <!--begin::Title-->
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Edit Sub Category</h5>
+                <!--end::Title-->
+                <!--begin::Separator-->
+                <div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-5 bg-gray-200"></div>
+                <!--end::Separator-->
+            </div>
+            <!--end::Details-->
+            <!--begin::Toolbar-->
+            <div class="d-flex align-items-center">
+                <!--begin::Button-->
+                <a href="{% url 'SubCategoryList' %}" class="btn btn-warning font-weight-bold ml-2">
+                    <span><i class="fas fa-arrow-left"></i></span>Back</a>
+                <!--end::Button-->
+            </div>
+            <!--end::Toolbar-->
+        </div>
+    </div>
+    <!--end::Subheader-->
+    <!--begin::Entry-->
+    <div class="d-flex flex-column-fluid">
+        <!--begin::Container-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action='' method='POST'>
+                        {% csrf_token %}
+                        <div class="card card-custom">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mt-3">
+                                        <label>Sub Category Name<span class="text-danger">*</span> :</label>
+                                        <input type="text" name="subcategory_name" value="{{item.subcategory_name}}" id="subcategory_name" placeholder="Enter Sub Category Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mt-3">
+                                        <label>Category<span class="text-danger">*</span> :</label>
+                                        <select name="category" id="category" class="form-control" required>
+                                            <option value="">SELECT SUB CATEGORY</option>
+                                            {% for categoryItem in categoryObj %}
+                                            <option value="{{categoryItem.pk}}" {% if categoryItem.pk == item.category.pk %} selected {% endif %}>{{categoryItem.category_name}}</option>                                
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary" type="submit">SAVE</button>
+                                <a href="{% url 'SubCategoryList' %}" class="btn btn-danger">CANCEL</a>
+                            </div>
+                        </div>
+                    </form>
+                    <!--end::Card-->
+                </div>
+            </div>
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--end::Entry-->
+</div>
+<!--end::Content-->
+{% endfor %}{% endblock content %}
