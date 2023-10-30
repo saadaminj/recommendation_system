@@ -2,7 +2,7 @@
 Recommendation system for a food based website. This repo contains model, synthetic data, and the demo website
 
 
-Web Application: -
+Web Application:
 •	As we go for the Python-Django combination for the web application development, where we follow the MVP model to develop the web application.
 •	MVP stands for Model, View, pages.
 •	Where data is stored in form of model, called by views and display by pages.
